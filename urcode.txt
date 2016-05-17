@@ -1,0 +1,274 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main ()
+{
+   int a,m=0,t=0,e=10,z,zz,y,yy;
+   char r,q,qq,qqq,eee,fff,l,ddd;
+
+   cout<<"---Kloputzfraugame---(alpha 2.2) \n";
+   cout<<"(S)tarten \n";
+   cout<<"(B)eenden \n";
+   cout<<">>>";
+   cin>>r;
+system("cls");
+
+    switch(r)
+   {
+    case ('S'):
+    case ('s'):
+    cout<<"\n-Starte Kloputzfraugame- \n  \n";
+    while (q != 'b' and q!= 'B')
+    {
+    z=rand();
+    y=rand();
+    zz=z%5;
+    yy=y%10;
+    if (e>99)
+    {e=100;}
+    cout<<"\n \n \n----->"<<m<<" Euro<-----\n \n";
+    for(l=0;l<e;l++)
+    {cout<<"|";}
+    if(e==50)
+    {cout<<"\n";}
+    cout<<e<<"% Energie\n";
+    cout<<"(G)eld vom Klotellerchen nehmen \n";
+    cout<<"(L)eute unterm Kloturschlitz durch beklauen \n";
+    cout<<"(K)lo putzen \n";
+    cout<<"(P)ause, Essen holen\n";
+    cout<<"(B)eenden";
+    cout<<"\n >>>";
+    cin>>q;
+    system("cls");
+    switch (q)
+       {
+        case ('G'):
+        case ('g'):
+        cout<<"Auf dem Tellerchen lagen "<<t<<" Euro =)";
+        m=t+m;
+        t=0;
+        break;
+
+        case ('L'):
+        case ('l'):
+        if (zz==0 or zz==1 or zz==2)
+        {
+        if (yy != 0)
+        {m=m+5;
+        cout<<"Langfinger! \nDu hast 5 Euro geklaut!";}
+        if (yy == 0)
+        {m=m+20;
+        cout<<"Jungejunge! Du hast einer alten Dame nen Zwanni geklaut!!";}
+        }
+        if (zz==3 or zz==4)
+        {m=m-8;
+        cout<<"Du wurdest angezeigt.\n8 Euro Strafe!";}
+        break;
+
+        case ('k'):
+        case ('K'):
+        if(e<1)
+        {cout<<"Du bist zu schwach zum putzen";}
+        if(zz != 4 and e>0)
+        {t++;
+         e--;
+        cout<<"Gut geputzt! Ein weiterer zahlender Kunde lachelt dich an! \n"<<t<<" Euro auf dem Tellerchen";}
+        if(zz == 4 and e>0)
+        {t=t+2;
+         e--;
+        cout<<"Gut geputzt! Der nette Herr hier mag dich.Er legt die nen 2er hin! \n"<<t<<"Euro auf dem Tellerchen";}
+        break;
+
+        case ('P'):
+        case ('p'):
+        cout<<"(P)izzaladen\n";
+        cout<<"(E)isladen\n";
+        cout<<"(F)ritz Mitte\n";
+        cout<<"(M)unzur Kebap\n";
+        cout<<">>>";
+        cin>>qq;
+        system("cls");
+           switch(qq)
+            {case ('P'):
+            case ('p'):
+            cout<<"\n(K)leine Pizza: 5 Euro.";
+            cout<<"\n(M)ittlere Pizza: 10 Euro.";
+            cout<<"\n(G)rosse Pizza: 20 Euro.\n";
+            cout<<">>>";
+            cin>>qqq;
+            system("cls");
+
+              switch(qqq)
+              {
+              case ('K'):
+              case ('k'):
+              if (m>4)
+              {cout<<"Kleine pizza, macht 5 Euro";
+              m=m-5;
+              e=e+5;
+              break;}
+
+              case('m'):
+              case('M'):
+              if(m>9)
+              {cout<<"Mittlere Pizza, macht 10 Euro";
+              m=m-10;
+              e=e+10;
+              break;}
+
+              case('g'):
+              case('G'):
+              if (m>19)
+              {cout<<"Grosse Pizza, macht 20 Euro";
+              m=m-20;
+              e=e+20;
+              break;}
+
+              default:
+              cout<<"Du hast zu wenig Geld";}
+
+          break;
+
+          case('e'):
+          case('E'):
+          cout<<"\n1) Eine Kugel: 1 Euro.";
+          cout<<"\n2) Zwei Kugeln: 2 Euro.";
+          cout<<"\n3) Drei Kugeln: 3 Euro.\n";
+          cout<<">>>";
+          cin>>eee;
+          system("cls");
+             switch(eee)
+             {case ('1'):
+             if(m>0)
+             {cout<<"Eine Kugel, macht 1 Euro!\n";
+             m--;
+             e++;
+             break;}
+
+             case ('2'):
+             if (m>1)
+             {cout<<"Zwei Kugeln, macht 2 Euro!\n";
+             m=m-2;
+             e=e+2;
+             break;}
+
+             case ('3'):
+             if(m>2)
+             {cout<<"Drei Kugeln, macht 3 Euro!\n";
+             m=m-3;
+             e=e+3;
+             break;}
+
+             default:
+             cout<<"Du hast zu wenig Geld";}
+          break;
+
+          case ('f'):
+          case ('F'):
+          cout<<"\n(K)leine Pommes: 1 Euro.";
+          cout<<"\n(G)rosse Pommes: 2 Euro.";
+          cout<<"\n(C)urrywurst mit Pommes:5 Euro.\n";
+          cout<<">>>";
+          cin>>fff;
+          system("cls");
+             switch(fff)
+             {
+              case ('k'):
+              case ('K'):
+              if (m>0)
+              {cout<<"Kleine Pommes, macht 1 Euro";
+              m--;
+              e++;
+              break;}
+
+              case('G'):
+              case('g'):
+              if(m>1)
+              {cout<<"Grosse Pommes, macht 2 Euro";
+              m=m-2;
+              e=e+2;
+              break;}
+
+              case('C'):
+              case('c'):
+              if (m>4)
+              {cout<<"Pommes mit Korri, 5 Euro bidda!";
+              m=m-5;
+              e=e+5;
+              break;}
+
+              default:
+              cout<<"Du hast zu wenig Geld";
+             }
+          break;
+          case ('M'):
+          case ('m'):
+          cout<<"\n(K)inder Doner: 2 Euro";
+          cout<<"\n(D)oner Kebap: 4 Euro";
+          cout<<"\nDoner (T)eller: 6 Euro\n";
+          cout<<">>>";
+          cin>>ddd;
+          system("cls");
+             switch (ddd)
+             {case ('K'):
+             case ('k'):
+             if(m>1)
+             {cout<<"Swei Euro bitteschon!";
+             m=m-2;
+             e=e+2;
+             break;}
+
+             case ('D'):
+             case ('d'):
+             if(m>3)
+             {cout<<"Vier Euro bitteschon!";
+             m=m-4;
+             e=e+4;
+             break;}
+
+             case('T'):
+             case('t'):
+             if (m>5)
+             {cout<<"Sechs Euro bitteschon!";
+             m=m-6;
+             e=e+6;
+             break;}
+
+             default:
+             cout<<"Du hast zu wenig Geld";
+             }
+          break;
+
+        }
+        //if (e>100)
+        //{e=100;}
+        break;
+
+        case ('x'):     //cheat!
+        m=m+400;        //cheat!
+        cout<<"CHEATER";//cheat!
+        break;
+
+        case ('y'):
+        e=e+20;
+        cout<<"CHEATER";
+        break;
+
+        case ('b'):
+        case ('B'):
+        cout<<"Sie konnen das Programm nun schliessen";
+        break;
+
+        default:
+        cout<<"Was willst du machen?!?";
+        }
+    cin.clear();
+    cin.ignore();
+    }
+    break;
+
+    default:
+    cout<<"Sie konnen das programm nun schliessen";
+}
+}
